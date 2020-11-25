@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Badge gallery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background-color: Aquamarine;
+		}
+		a {
+			text-decoration: none;
+		}
+		h1 {
+			font-family: 'Charm';
+			color: #0B1C3A;
+			border-bottom: 5px double black;
+			width: 600px;
+			height: 17px;
+			/*background-color: red;*/
+		}
+		#content {
+			width: 1160px;
+			margin: 8px auto;
+		}
+		#sidebar {
+			width: 127px;
+			float: left;
+		}
+		#otherbut {
+			border: 2px solid #0B1C3A;
+			background-color: #0B1C3A;
+			width: 123px;
+			height: 123px;
+			border-radius: 100px;
+			text-align: center;
+			vertical-align: center;
+			line-height: 123px;
+			font-size: 23px;
+			font-family: Verdana;
+			color: white;
+		}
+		#otherbut:hover {
+			cursor: pointer;
+		}
+		#awcbut:hover {
+			cursor: pointer;
+		}
+		#center {
+			float: left;
+			width: 900px;
+			border:2px solid green;
+			background-color: rgba(245, 245, 220, 0.4);
+			text-align: center;
+			line-height: 0.5;
+		}
+		#challengercard {
+			float: left;
+			width: 125px;
+			height: 200px;
+			border-top: 2px solid #0B1C3A;
+			border-bottom: 2px solid #0B1C3A;
+			border-right: 2px solid #0B1C3A;
+			line-height: 1;
+			vertical-align: center;
+			text-align: center;
+			background-color: white;
+			color: #004d4d;
+		}
+		#pointbox {
+			margin: 10px auto;
+			vertical-align: center;
+			width: 115px;
+			height: 115px;
+			border-radius: 100px;
+			background-color: #004d4d;
+			color: white;
+			font-size: 40px;
+			font-weight: bold;
+			font-family: Tahoma;
+			line-height: 115px;
+		}
+		#point {
+		}
+		#nonawc {
+			display: none;
+			height: 500px;
+		}
+		#genreheader {
+			border-bottom: 1px solid white;
+		}
+		#genreheader:hover {
+			cursor: pointer;
+		}
+		#masteryheader {
+			border-bottom: 1px solid white;
+		}
+		#masteryheader:hover {
+			cursor: pointer;
+		}
+		.header {
+			width: 100%;
+			padding: 8px 0px;
+			background-color: teal;
+			color: white;
+			line-height: 1;
+		}
+		#genre {
+			display: none;
+		}
+		#mastery {
+			display: none;
+		}
+		#monthly {
+			text-align: center;
+			margin: 0 auto;
+		}
+		#center img {
+			text-align: center;
+			margin: 0 auto;
+			border-collapse: collapse;
+		}
+		img.uncomplete {
+			-webkit-filter: grayscale(100%);
+ 			filter: grayscale(100%);
+		}
+		img.tier1 {
+			width: 120px;
+		}
+		img.tier0 {
+			width: 200px;
+			text-align: left;
+		}
+		img.tier2 {
+			width: 100px;
+			height: 138px;
+			display: block;
+			float: left;
+		}
+		img.tier3 {
+			width: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#awcbut').click(function(){
+				$('#nonawc').hide();
+				$('#awc').show();
+			});
+			$('#otherbut').click(function(){
+				$('#nonawc').show();
+				$('#awc').hide();
+			});
+			$('#genreheader').click(function(e){
+				$('#genre').stop(true, true).slideToggle('slow');
+				e.stopPropagation();
+			});
+			$('#masteryheader').click(function(e){
+				$('#mastery').stop(true, true).slideToggle('slow');
+				e.stopPropagation();
+			});
+		});
+	</script>
+</head>
+<body>
+	<center><h1 style="padding: 20px;">Badge gallery</h2></center>
+	<div id="content">
+		<div id="sidebar"><img id="awcbut" style="width: 100%" src="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b131231-EHtRf6AS7Nta.png"/><br>
+			<div id="otherbut"><b>OTHERS</b></div>
+		</div>
+		<div id="center">
+			<div id="awc">
+				<h3 class="header">TIER</h3>
+				<div id="tier">
+					<a target="_blank" href="https://anilist.co/forum/thread/4448/comment/226108"><img class ="tier1" src="https://awc.nymh.moe/assets/tier/WK1ejb8.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5027/comment/232103"><img class ="tier1" src="https://awc.nymh.moe/assets/tier/ZPHQ1ww.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/8462/comment/248331"><img class ="tier1" src="https://awc.nymh.moe/assets/tier/V0FHnyNJM8Lt08.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6395/comment/227511"><img class ="tier1" src="https://awc.nymh.moe/assets/tier/P63e2SLVqwGia14.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10665/comment/236946"><img class ="tier1" src="https://awc.nymh.moe/assets/tier/A2EO9UkmL138.png"/></a>
+				</div>
+				<div style="clear: both;"></div>
+				<h3 class="header" id="genreheader">GENRE</h3>
+				<div id="genre">
+					<!--action-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5288/comment/226145"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/BbxyKvRdzm6Se5b.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5288/comment/226145"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/dK7hBxifokL9.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5288/comment/226145"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/DGCv5uOYpV74It.png"/></a>
+					<!--adventure-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6111/comment/226149"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/TVKOxQHRepmy.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6111/comment/226149"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/3e0Xf7vyAWFPbpY.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6111/comment/226149"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/TKnXKB5RmnQ44Ay.png"/></a>
+					<!--comedy-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5289/comment/226285"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/5xRTxc8qwyrAflv.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5289/comment/226285"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/LQKnxdBMRYE35.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5289/comment/226285"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/QhbwXke78aqODsP.png"/></a>
+					<!--drama-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5875/comment/226287"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/4JnEiXz707.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5875/comment/226287"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/nU3atQJvcs.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5875/comment/226287"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/6P3plWK4bI.png"/></a>
+					<!--ecchi-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6631/comment/226292"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/pAxoneNUF787.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6631/comment/226292"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/ElMmSnbOqHLN06.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6631/comment/226292"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--fantasy-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5290/comment/226288"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/Yt8b5JUrUorRvBc.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5290/comment/226288"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/k2rCb2bHw0457.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5290/comment/226288"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/hconhVGICvK.png"/></a>
+					<!--horror-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5558/comment/226295"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/D3BJ3U840iUw.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5558/comment/226295"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/DnqCjCdWeBH76.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5558/comment/226295"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--mahoushoujo-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6376/comment/226298"><img class ="tier2 uncomplete" src="https://i.imgur.com/UMcRVSu.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6376/comment/226298"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6376/comment/226298"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--mecha-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6112/comment/226299"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/iHf8PQFzUGILJ.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6112/comment/226299"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/9s1CtSdnZVUaHMZ.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6112/comment/226299"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--music-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6375/comment/226306"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/TZcX87okHCS6Ra38.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6375/comment/226306"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6375/comment/226306"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--mystery-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5557/comment/226307"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/XkhNvzz048mV.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5557/comment/226307"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/uKJWG4bZut6xnds.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5557/comment/226307"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/IJjueEvA6A5JS1O.png"/></a>
+					<!--thriller-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5556/comment/225956"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/kg4YtQxrVXfE.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5556/comment/225956"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/bSuXgyDFoCnY0k.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5556/comment/225956"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/7cPBsX6oKzqfrlV.png"/></a>
+					<!--romance-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5291/comment/226308"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/X8OjEO3vFPmsywy.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5291/comment/226308"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/oOckZUtQhVzb.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5291/comment/226308"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--scifi-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5292/comment/226309"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/2wEX1TSESP3eX14.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5292/comment/226309"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/eouQZzZmg0j1t.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5292/comment/226309"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/xqCcgfuDqnBYv.png"/></a>
+					<!--slice of life-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5293/comment/226310"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/1rhr0RZJTIypgT.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5293/comment/226310"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/TQdZ2SUwmNCZqE.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5293/comment/226310"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/wNLptsPt6GEoKKd.png"/></a>
+					<!--sport-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5876/comment/226311"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/tF85hudXNZ.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5876/comment/226311"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/6Al43FSXp5.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/5876/comment/226311"><img class ="tier2 uncomplete" src="https://i.imgur.com/VMivVV8.png"/></a>
+					<!--supernatural-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6630/comment/226313"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/KL8FQZmbzoEJ4XR43.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6630/comment/226313"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/BfRSx1j3PQ068.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6630/comment/226313"><img class ="tier2" src="https://awc.nymh.moe/assets/genres/xafP1RsqTgnQ3vS096.png"/></a>
+					<div style="clear: both;"></div>
+				</div>
+				<h3 class="header" id="masteryheader">GENRE MASTERY</h3>
+				<div id="mastery">
+					<!--action-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5288/comment/259398"><img class ="tier0" src="https://awc.nymh.moe/assets/genres/DmfuaPU1bFWc02deqG57.png"/></a>
+					<!--adventure-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6111/comment/451109"><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--comedy-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5289/comment/308536"><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--drama-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5875/comment/253664"><img class ="tier0" src="https://awc.nymh.moe/assets/genres/8S2qeCxJIn26.png"/></a>
+					<!--ecchi-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/IWMZ1uaTo88.png"/></a>
+					<!--fantasy-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5290/comment/474693"><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--horror-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/C4eLKVh27DWXHQnJM37.png"/></a>
+					<!--mahou-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/Ztj4OgqzkUuoHxQdLE28.png"/></a>
+					<!--mecha-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--music-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/hJA51Xfj0Smqp70.png"/></a>
+					<!--mystery-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5557/comment/418248"><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/ho3Pgfubtrs176.png"/></a>
+					<!--thriller-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5556/comment/252965"><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--romance-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--sci-fi-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5292/comment/431931"><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--sol-->
+					<a target="_blank" href="https://anilist.co/forum/thread/5293/comment/407204"><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/7k9KMoncOXfB35.png"/></a>
+					<!--sports-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src="https://i.imgur.com/voeNK78.png"/></a>
+					<!--supernatural-->
+					<a target="_blank" href="https://anilist.co/forum/thread/6630/comment/264602"><img class ="tier0 uncomplete" src="https://awc.nymh.moe/assets/genres/jGl7rhovBCsUuk95.png"/></a>
+					<!--hentai-->
+					<a target="_blank" href=""><img class ="tier0 uncomplete" src=""/></a>
+				</div>
+				<h3 class="header">MONTHLY</h3>
+				<div id="monthly">
+					<a target="_blank" href="https://anilist.co/forum/thread/10154/comment/225947"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/Ymde5VUzKohk78ATWf04.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10426/comment/231121"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/xmvwhfB8We28.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10817/comment/240423"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/V0FZRycahAx57.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11199/comment/249654"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/PUdokrD7XO8l9cwpAQ75.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11559/comment/260938"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/WTX3owFDACM16.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/12234/comment/277776"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/v81tLX4ElWzUIgbxqY16.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/13031/comment/301010"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/ChuIVrS21bsaKvH14.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/13948/comment/326674"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/NZWcOABqTSiy26.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/15233/comment/363880"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/qtziMOPNb68.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/16404/comment/405156"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/m3EboRnl86d91.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/17514/comment/438697"><img class ="tier2" src="https://awc.nymh.moe/assets/monthly/cNPfLYCVk29.gif"/></a>
+					<div style="clear: both;"></div>
+				</div>
+				<h3 class="header">SEASONAL</h3>
+				<div id="seasonal">
+					<a target="_blank" href="https://anilist.co/forum/thread/9459/comment/225854"><img class ="tier3" src="https://awc.nymh.moe/assets/seasonal/r2hmR1SUyXYId855.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10477/comment/236597"><img class ="tier3" src="https://awc.nymh.moe/assets/seasonal/uNSpJ0FfQ1RmMzDI2O92.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11630/comment/262681"><img class ="tier3" src="https://awc.nymh.moe/assets/seasonal/ygBp1nDzwV8dl37.gif"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/14055/comment/407219"><img class ="tier3" src="https://awc.nymh.moe/assets/seasonal/4BsfKrQ2oZU44.gif"/></a>
+				</div>
+				<h3 class="header">CLASSIC</h3>
+				<div id="classic">
+					<a target="_blank" href="https://anilist.co/forum/thread/13347/comment/407214"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/classics/VMzsuYOpIvDwZW4SG99.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/7104/comment/225893"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/classics/BqO4CZeY010.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10377/comment/230025"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/classics/C9kK0psiHV8Azl15u59.png"/></a>
+				</div>
+				<h3 class="header">MANGA</h3>
+				<div id="manga">
+					<a target="_blank" href="https://anilist.co/forum/thread/9960/comment/230660"><img class ="tier3" src="https://awc.nymh.moe/assets/mangaspecial/OIPv6BnGch42.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/9960/comment/230660"><img class ="tier3" src="https://awc.nymh.moe/assets/mangaspecial/M6ihR9q1tzP01.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/9960/comment/230660"><img class ="tier3" src="https://awc.nymh.moe/assets/mangaspecial/Cqht7DdRYmMaQsSf25.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/16045/comment/393434"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/mangaspecial/PYS89AC03cdMDj24.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/16045/comment/393434"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/mangaspecial/WfTOC08p7r5n79.png"/></a>
+					<div style="clear: both;"></div>
+				</div>
+				<h3 class="header">MANGA CITY</h3>
+				<div id="mangacity">
+					<a target="_blank" href="https://anilist.co/forum/thread/7196/comment/230663"><img class ="tier3" src="https://awc.nymh.moe/assets/special/i5kZ6P3mWEhYjKUT17.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/7915/comment/230664"><img class ="tier3" src="https://awc.nymh.moe/assets/mangacity/Q7ax0lkzZ9HYfo60.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/8889/comment/230667"><img class ="tier3" src="https://awc.nymh.moe/assets/mangacity/BWqkgF0HmV75.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/9675/comment/230668"><img class ="tier3" src="https://awc.nymh.moe/assets/mangacity/EAhVXcrNWp9MQ97.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11261/comment/251549"><img class ="tier3" src="https://awc.nymh.moe/assets/mangacity/BliEZmDvNWGFk1KI18.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/12658/comment/288784"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/mangacity/Pz0HIQVNGbrXlx1os60.png"/></a>
+					<div style="clear: both;"></div>
+				</div>
+
+				<h3 class="header">COLLECTION</h3>
+				<div id="collection">
+					<a target="_blank" href="https://anilist.co/forum/thread/7567/comment/259933"><img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/collections/nbqgzHX55.png"/></a>
+					<img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/collections/s0nu5PC15.png"/>
+					<img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/collections/R2spBoH6XJ74.png"/>
+					<img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/collections/Xrhmn5oz65.png"/>
+					<img class ="tier3 uncomplete" src="https://i.imgur.com/erXmPbx.png"/>
+					<img class ="tier3 uncomplete" src="https://awc.nymh.moe/assets/collections/wSIp3P1q440.png"/>
+					<div style="clear: both;"></div>
+				</div>
+				<h3 class="header">SPECIAL</h3>	
+				<div id="other">
+					<a target="_blank" href="https://anilist.co/forum/thread/9282/comment/230419"><img class ="tier2" src="https://awc.nymh.moe/assets/special/Ws5JeFkB45.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/13560/comment/315563"><img class ="tier2" src="https://awc.nymh.moe/assets/special/QeRV5AjJfTmH1a38.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/17048/comment/424210"><img class ="tier2" src="https://awc.nymh.moe/assets/special/CrFT5oHQAO72.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11405/comment/255752"><img class ="tier2" src="https://awc.nymh.moe/assets/special/0KqQIdfciwp5n248.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6553/comment/226126"><img class ="tier2" src="https://awc.nymh.moe/assets/special/I1PElZM8jR2LyxQb75.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/6171/comment/227149"><img class ="tier2" src="https://awc.nymh.moe/assets/special/420V44K92kU4uQN.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/9777/comment/226118"><img class ="tier2" src="https://awc.nymh.moe/assets/special/qAG5sZiVr8o7ymlK50.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/14236/comment/335538"><img class ="tier2 uncomplete" src="https://awc.nymh.moe/assets/mangaspecial/iuk49QMx0vR99.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/7738/comment/230394"><img class ="tier2" src="https://awc.nymh.moe/assets/special/M12Or7xpw951.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11041/comment/245139"><img class ="tier2" src="https://awc.nymh.moe/assets/special/ZWvPp1J3eyw264.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/11041/comment/245139"><img class ="tier2" src="https://awc.nymh.moe/assets/special/HMLiRGXaNIzgEnjr481.png"/></a>
+					<!--staff pick-->
+					<a target="_blank" href="https://anilist.co/forum/thread/10366/comment/229006">
+						<img class ="tier2" src="https://cdn.discordapp.com/attachments/468735403306909696/768187347321356309/c6740e_2a1b9527dcbc498ebcc61ade4d47c8dd_mv2.gif"/>
+					</a>
+					<a target="_blank" href="https://anilist.co/forum/thread/14634/comment/347510"><img class ="tier2" src="https://i.imgur.com/raqdczA.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10132/comment/225938"><img class ="tier2" src="https://awc.nymh.moe/assets/special/Np7LdDcmoh02.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/12812/comment/303937"><img class ="tier2" src="https://awc.nymh.moe/assets/special/dYo7Cy1shQgR4c15.png"/></a>
+					<a target="_blank" href="https://anilist.co/forum/thread/10745/comment/239607"><img class ="tier2" src="https://awc.nymh.moe/assets/special/wdFXhMkqrO0K98.png"/></a>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<div id="nonawc">
+				<a href="https://anilist.co/forum/thread/10222" target="_blank"><h3 class="header">MANGA</h3></a>
+				<div id="nonawcmanga">
+					<img class ="tier2" src="https://i.imgur.com/Pu13waQ.png"/>
+					<img class ="tier2" src="https://i.imgur.com/x70Qflz.png"/>
+					<img class ="tier2" src="https://i.imgur.com/fxNpzAp.png"/>
+					<img class ="tier2" src="https://i.imgur.com/ACqNjS1.png"/>
+					<img class ="tier2" src="https://i.imgur.com/UlRlp5X.png"/>
+					<img class ="tier2" src="https://i.imgur.com/26KCp3G.png"/>
+					<img class ="tier2" src="https://i.imgur.com/mCiRZ39.png"/>
+					<img class ="tier2" src="https://i.imgur.com/XlA2MXA.png"/>
+					<img class ="tier2" src="https://i.imgur.com/GSvkJlV.png"/>
+					<img class ="tier2" src="https://i.imgur.com/A4TA3fh.png"/>
+					<img class ="tier2" src="https://i.imgur.com/S4LuNFj.png"/>
+					<img class ="tier2" src="https://i.imgur.com/nBdozfF.png"/>
+					<img class ="tier2" src="https://i.imgur.com/B0mkSYx.png"/>
+					<img class ="tier2" src="https://i.postimg.cc/GppvVChz/14k-Read-Re-Vamp.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/ZqD6hMWm/15k-Read-Re-Vamp.png"/>
+					<div style="clear: both;"></div>
+				</div>
+				<a href="https://anilist.co/forum/thread/8354" target="_blank"><h3 class="header">EPISODE</h3></a>
+				<div id="episode">
+					<img class ="tier2" src="https://i.imgur.com/r5Wfqfz.png"/>
+					<img class ="tier2" src="https://i.imgur.com/hnDuFI3.png"/>
+					<img class ="tier2" src="https://i.imgur.com/LwrBved.png"/>
+					<img class ="tier2" src="https://i.imgur.com/DTmDnek.png"/>
+					<img class ="tier2" src="https://i.imgur.com/tsVfCdH.png"/>
+					<img class ="tier2" src="https://i.imgur.com/DiJUVBE.png"/>
+					<img class ="tier2" src="https://i.postimg.cc/cHgbVJRB/7000_Episodes_Watched_ReVamp.png"/>
+					<img class ="tier2" src="https://i.postimg.cc/9fX1jfhq/8000_Episodes_Watched_ReVammp.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/8P8Hz4GG/9000_Episodes_Watched_ReVamp.png"/>
+					<div style="clear: both;"></div>
+				</div>
+				<a href="https://anilist.co/forum/thread/10221" target="_blank"><h3 class="header">MOVIE</h3></a>
+				<div id="movie">
+					<img class ="tier2" src="https://i.imgur.com/TZIhjXG.png"/>
+					<img class ="tier2" src="https://i.imgur.com/XnV2AMT.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/dt14X3Jk/100_Movies_Watched_ReVamped.png"/>
+					<div style="clear: both;"></div>
+				<a href="https://anilist.co/forum/thread/10287" target="_blank"><h3 class="header">STUDIO</h3></a>
+				<div>
+					<img class ="tier2" src="https://i.postimg.cc/8cP9WPdP/Madhouse_Level_1.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/zXv4GvXx/Madhouse_Level_2.png"
+					/>
+					<img class ="tier2" src="https://i.postimg.cc/DyRpfcNz/Production_I.G_Level_1.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/7LkB0Zw8/Production_I.G_Level_2.png"
+					/>
+					<img class ="tier2" src="https://i.postimg.cc/bNn0h8HM/Bones_Level_1.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/mkvQH6R8/Bones_Level_Two.png"
+					/>
+					<img class ="tier2" src="https://i.postimg.cc/76Mr0WpX/J.C_Staff_Level_1.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/brycTRPP/J.C_Staff_Level_2.png"
+					/>
+					<img class ="tier2" src="https://i.postimg.cc/2SwHdf61/Studio_Pierrot_Level_1.png"/>
+					<img class ="tier2 uncomplete" src="https://i.postimg.cc/7LtmcMSD/Studio_Pierrot_Level_2.png"
+					/>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<a href="https://anilist.co/user/Haki/" target="_blank"><div id="challengercard">
+		<h3 class="header" style="background-color: #0B1C3A;">Haki</h3>
+		<div id="pointbox">
+			<h3>120</h3>
+		</div>
+		<h3 id="point">points</h3>
+	</div></a>
+	<div style="clear: both;"></div>
+</body>
+</html>
